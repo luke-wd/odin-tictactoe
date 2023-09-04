@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.game-board {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 1.75rem;
+}
+
+.game-board-cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #f8fafc;
+    border-radius: 0.25rem;
+    filter: drop-shadow(0 2px 5px #cbd5e1);
+    user-select: none;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.game-board-cell:hover {
+    width: 106px;
+    height: 106px;
+    margin: -3px;
+    filter: drop-shadow(0 5px 5px #cbd5e1);
+}
+
+.game-board-cell.X {
+    background-color: #60a5fa;
+}
+
+.game-board-cell.X.win {
+    background-color: #2563eb;
+}
+
+.game-board-cell.O {
+    background-color: #f87171;
+}
+
+.game-board-cell.O.win {
+    background-color: #dc2626;
+}
+
+.player-turn-display {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.reset-button {
+    width: 100px;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #e2e8f0;
+    color: #475569;
+    transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #cbd5e1;
+}
